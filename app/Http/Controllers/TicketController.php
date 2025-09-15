@@ -97,7 +97,7 @@ class TicketController extends Controller
         $today = Carbon::today()->toDateString();
 
         // Définir les jours de l'événement
-        $jour1 = "2025-09-15";
+        $jour1 = "2025-11-04";
         $jour2 = "2025-11-05";
         $jour3 = "2025-11-06";
 
