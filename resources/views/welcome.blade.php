@@ -331,6 +331,52 @@
         /* Styles que vous voulez appliquer à tous les liens, sauf ceux avec la classe "no-style" */
         text-decoration: none !important;
     }
+.expo-section {
+  background: linear-gradient(rgba(0,86,179,0.9), rgba(255,140,0,0.9)),
+              url('logo/img.jpg') center/cover fixed;
+  color: white;
+}
+
+.expo-card {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+.expo-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.2);
+}
+
+.pricing-card {
+  background: rgba(255,255,255,0.15);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.pricing-card h4 {
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+.pricing-card .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+}
+.pricing-card li {
+  margin-bottom: 8px;
+}
+.pricing-card.featured {
+  border: 2px solid #ffd700;
+  background: rgba(0,0,0,0.6);
+  transform: scale(1.05);
+}
 
 
   </style>
@@ -653,6 +699,85 @@
             </div>
         </div>
     </section>
+
+        <!-- Territoire Expo -->
+    <section id="expo" class="py-5 expo-section">
+    <div class="container" data-aos="fade-up">
+        <h2 class="section-title text-white">Territoire Expo 2025</h2>
+        <p class="lead text-white text-center mb-5">
+        Salon d’exposition, de réseautage et de coopération des villes et territoires
+        – Vitrine de solutions, du 4 au 6 novembre 2025, King Fahd Palace, Dakar.
+        </p>
+
+        <!-- Objectifs -->
+        <div class="row mb-5">
+        <div class="col-md-4" data-aos="zoom-in">
+            <div class="card expo-card">
+            <div class="card-body">
+                <h5>🌍 Valoriser les pratiques locales</h5>
+                <p>Projets, services publics, innovations citoyennes, produits locaux, partenariats…</p>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card expo-card">
+            <div class="card-body">
+                <h5>🤝 Offrir une vitrine dynamique</h5>
+                <p>Villes, ministères, entreprises, start-up, OSC, universités, réseaux africains et internationaux.</p>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="card expo-card">
+            <div class="card-body">
+                <h5>🔗 Créer des opportunités</h5>
+                <p>Networking, coopération et dialogues stratégiques pour renforcer la souveraineté locale.</p>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Packs -->
+        <h3 class="text-white mb-4 text-center">Packs Exposants</h3>
+        <div class="row">
+        <div class="col-md-4" data-aos="fade-right">
+            <div class="pricing-card">
+            <h4>Pack Ivoire</h4>
+            <p class="price">1 000 000 FCFA</p>
+            <ul>
+                <li>Stand équipé 6 m²</li>
+                <li>Nom dans e-catalogue</li>
+                <li>2 badges Expo</li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up">
+            <div class="pricing-card featured">
+            <h4>Pack Gold</h4>
+            <p class="price">1 500 000 FCFA</p>
+            <ul>
+                <li>Stand 6 m² personnalisé</li>
+                <li>Logo sur site + projection</li>
+                <li>Pitch 5 min & 1 Gala</li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-left">
+            <div class="pricing-card">
+            <h4>Pack Diamond</h4>
+            <p class="price">2 000 000 FCFA</p>
+            <ul>
+                <li>Stand premium 9 m²</li>
+                <li>Logo sur tous supports</li>
+                <li>Pitch 8 min & Masterclass</li>
+                <li>2 Gala + 3 badges</li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
 
 
   <!-- Inscription -->
