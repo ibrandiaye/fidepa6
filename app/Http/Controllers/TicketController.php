@@ -73,7 +73,7 @@ class TicketController extends Controller
         //Mail::to($request->email)->send(new TicketMail($ticket));
         // Envoi du mail avec PDF en pièce jointe
        // $qrcode = QrCode::size(300)->generate(config('app.url').'/'.$ticket->id);
-        $qrcode = base64_encode(QrCode::format('svg')->size(300)->generate(config('app.url').'/'.$ticket->id));
+        $qrcode = base64_encode(QrCode::format('svg')->size(300)->generate(config('app.url'.'/ticket').'/'.$ticket->id));
         Mail::to($ticket['email'])->send(new ParticipantRegistered($ticket, "FIDEPA 6",$qrcode));
        // return redirect('ticket');
        return response()->json(['success' => true, 'message' => 'Inscription réussie !']);
