@@ -10,7 +10,7 @@
         <p><strong>Pays :</strong> {{ $ticket->pays }}</p>
         <p><strong>Téléphone :</strong> {{ $ticket->tel }}</p>
         <hr>
-        <p class="text-muted">Code : <strong>{{ $ticket->code }}</strong></p>
+        <p class="text-muted">Code : <strong>{{ $ticket->code_unique }}</strong></p>
         <span class="badge bg-success">✔ Inscription confirmée</span>
     </div>
 </div>
