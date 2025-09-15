@@ -24,3 +24,10 @@ Route::get('lang/{locale}', function ($locale) {
     }
     return redirect()->back();
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/by/jour/{jour}', [TicketController::class, 'getByJour'])->name('getByJour');
+

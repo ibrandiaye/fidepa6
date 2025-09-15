@@ -161,6 +161,15 @@
   overflow: hidden;
 }
 
+.inscription-section {
+  background: linear-gradient( rgba(0, 86, 179, 0.7),  /* bleu FIDEPA */
+                rgba(255, 140, 0, 0.7));
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+}
+
 .bg-video {
   position: absolute;
   top: 0;
@@ -252,6 +261,72 @@
   color: transparent; /* fallback */
 }
 
+.nav-tabs button
+{
+    color: #000 !important;
+}
+#programme {
+  background: linear-gradient(rgba(0,86,179,0.9), rgba(255,140,0,0.9)),
+              url('logo/dakar1.jpg') no-repeat center center/cover;
+  color: white;
+}
+
+.nav-pills .nav-link {
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+  margin: 0 5px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+.nav-pills .nav-link.active {
+  background: linear-gradient(45deg, #0056b3, #ff8c00);
+  font-weight: bold;
+}
+
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 30px;
+  border-left: 3px solid #ffd700;
+}
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+.timeline-item:before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #0056b3, #ff8c00);
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.timeline-time {
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 6px;
+}
+.timeline-content {
+  background: rgba(0,0,0,0.4);
+  padding: 12px 18px;
+  border-radius: 10px;
+  line-height: 1.4;
+}
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
 
 
   </style>
@@ -423,19 +498,158 @@
 
 
   <!-- Programme -->
-  <section id="programme" class="py-5">
-    <div class="container" data-aos="fade-up">
-      <h2 class="section-title">Programme Provisoire</h2>
-      <p class="text-center">Détails disponibles dans la brochure officielle.</p>
-    </div>
-  </section>
+      <!-- Program Section -->
+    <section id="programme" class="py-5">
+        <div class="container" data-aos="fade-left">
+            <h2 class="section-title text-center text-white mb-5">{{ __('program.title') }}</h2>
+
+            <!-- Tabs -->
+            <ul class="nav nav-pills justify-content-center mb-4" id="programTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="day1-tab" data-bs-toggle="tab" data-bs-target="#day1" type="button" role="tab">
+                {{ __('program.days.day1') }}
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="day2-tab" data-bs-toggle="tab" data-bs-target="#day2" type="button" role="tab">
+                {{ __('program.days.day2') }}
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="day3-tab" data-bs-toggle="tab" data-bs-target="#day3" type="button" role="tab">
+                {{ __('program.days.day3') }}
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="day4-tab" data-bs-toggle="tab" data-bs-target="#day4" type="button" role="tab">
+                {{ __('program.days.day4') }}
+                </button>
+            </li>
+            </ul>
+
+            <!-- Content -->
+            <div class="tab-content" id="programTabsContent">
+
+            <!-- Jour 1 -->
+            <div class="tab-pane fade show active" id="day1" role="tabpanel">
+                <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-time">&nbsp;&nbsp;09h00 - 10h30</div>
+                    <div class="timeline-content">{{ __('program.activities.welcome') }}</div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-time">&nbsp;&nbsp;10h30 - 11h00</div>
+                    <div class="timeline-content">{{ __('program.activities.coffee') }}</div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-time">&nbsp;&nbsp;11h00 - 12h30</div>
+                    <div class="timeline-content">{{ __('program.activities.opening') }}</div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-time">&nbsp;&nbsp;12h00 - 13h30</div>
+                    <div class="timeline-content">{{ __('program.activities.inaugural') }}</div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-time">&nbsp;&nbsp;13h30 - 14h30</div>
+                    <div class="timeline-content">{{ __('program.activities.lunch') }}</div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-time">&nbsp;&nbsp;14h30 - 16h00</div>
+                    <div class="timeline-content">{!! __('program.panels.p1') !!}</div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-time">&nbsp;&nbsp;16h30 - 18h00</div>
+                    <div class="timeline-content">{!! __('program.sessions.s') !!} 1 & 2</div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Jour 2 -->
+            <div class="tab-pane fade" id="day2" role="tabpanel">
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-time">&nbsp;&nbsp;09h00 - 09h30</div>
+                        <div class="timeline-content">{{ __('program.activities.setup') }}</div>
+                    </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-time">&nbsp;&nbsp;09h30 - 11h00</div>
+                    <div class="timeline-content">{!! __('program.panels.p2') !!}</div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-time">&nbsp;&nbsp;11h00 - 11h30</div>
+                    <div class="timeline-content">{!! __('program.activities.coffee') !!}</div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-time">&nbsp;&nbsp;11h30 - 13h30</div>
+                    <div class="timeline-content">{!! __('program.sessions.s') !!} 3 & 4</div>
+                </div>
+                 <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-time">&nbsp;&nbsp;13h30 - 14h30</div>
+                    <div class="timeline-content">{!! __('program.activities.lunch') !!}</div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-time">&nbsp;&nbsp;14h30 - 16h00</div>
+                    <div class="timeline-content">{!! __('program.panels.p3') !!}</div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-time">&nbsp;&nbsp;16h00 - 18h00</div>
+                    <div class="timeline-content">{!! __('program.sessions.s') !!} 5 & 6</div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Jour 3 -->
+            <div class="tab-pane fade" id="day3" role="tabpanel">
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-time">&nbsp;&nbsp;09h00 - 09h30</div>
+                        <div class="timeline-content">{{ __('program.activities.setup') }}</div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-time"> &nbsp;&nbsp;09h30 - 11h00</div>
+                        <div class="timeline-content">{{ __('program.assembly') }}</div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-time">&nbsp;&nbsp;11h00 - 11h30</div>
+                        <div class="timeline-content">{!! __('program.activities.coffee') !!}</div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-time">&nbsp;&nbsp;11h30 - 13h30</div>
+                        <div class="timeline-content">{!! __('program.training_networking') !!}</div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-time">&nbsp;&nbsp;13h30 - 14h30</div>
+                        <div class="timeline-content">{!! __('program.activities.lunch') !!}</div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-time">&nbsp;&nbsp;14h30 - 18h00</div>
+                        <div class="timeline-content">1. {{ __("program.activities.gala") }} <br> 2. {{ __("program.activities.pell_reading") }}  <br> 3. {{ __("program.closing") }} </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 4 -->
+            <div class="tab-pane fade" id="day4" role="tabpanel">
+                <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-time">&nbsp;&nbsp; {{ __("program.days.all_day") }}</div>
+                    <div class="timeline-content">{{ __("program.activities.visit") }}</div>
+                </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
 
   <!-- Inscription -->
-  <section id="inscription" class="py-5 bg-light">
+  <section id="inscription" class="py-5  inscription-section">
     <div class="container" data-aos="zoom-in-up">
       <h2 class="section-title">Inscription</h2>
       <div class="text-center">
-        <a href="https://bit.ly/fidepa06" target="_blank" class="btn btn-fidepa btn-lg">Lien d'inscription</a>
+        <button  class="btn btn-gradient btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">Lien d'inscription</button>
       </div>
     </div>
   </section>
@@ -444,7 +658,7 @@
   <section id="contact" class="py-5">
     <div class="container" data-aos="fade-left">
       <h2 class="section-title">Contact</h2>
-      <p class="text-center">secretariat@oidp-afrique.org</p>
+      <h5 class="text-center">Bureau Président OIDP Afrique : president@oidp-afrique.org <br>   Secrétariat Général : secretariat@oidp-afrique.org / khadim@oidp-afrique.org</h5>
     </div>
   </section>
 
@@ -572,11 +786,17 @@
   </div>
 </div>
 
+<!-- Loader -->
+<div id="loaderOverlay" class="loader-overlay d-none">
+  <div class="spinner-border text-light" role="status">
+    <span class="visually-hidden">Chargement...</span>
+  </div>
+</div>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container text-center">
-      <p>&copy; 2025 FIDEPA - Tous droits réservés</p>
+      <p>&copy; 2025 FIDEPA - Tous droits réservés </p>
     </div>
   </footer>
 
@@ -587,7 +807,7 @@
     AOS.init({ duration: 1000, once: true });
 
     // Effet typing
-    const text = '"De la résilience à la souveraineté : rôles des villes, des territoires et des acteurs"';
+    const text = '"{{ __('messages.forum_theme') }}"';
     let i = 0;
     function typing() {
       if (i < text.length) {
@@ -638,6 +858,7 @@ $(function () {
       alert("Veuillez remplir tous les champs obligatoires.");
       return;
     }
+    $("#loaderOverlay").removeClass("d-none");
 
     // Envoi AJAX
     $.ajax({
@@ -651,6 +872,10 @@ $(function () {
       },
       error: function (xhr) {
         alert("Erreur lors de l'inscription.");
+      },
+       complete: function () {
+        // Cacher loader
+        $("#loaderOverlay").addClass("d-none");
       }
     });
   });

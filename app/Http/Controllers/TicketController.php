@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Mail\ParticipantRegistered;
 use App\Mail\TicketMail;
+use App\Models\Ticket;
 use App\Repositories\TicketRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Mail;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
@@ -25,6 +27,11 @@ class TicketController extends Controller
     public function index()
     {
         $tickets = $this->ticketRepository->getAll();
+        return view('ticket.index',compact('tickets'));
+    }
+      public function getByJour($jour)
+    {
+        $tickets = $this->ticketRepository->getByJour($jour);
         return view('ticket.index',compact('tickets'));
     }
 
@@ -81,9 +88,40 @@ class TicketController extends Controller
      */
     public function show($id)
     {
-        $ticket = $this->ticketRepository->getById($id);
-        return view('ticket.show',compact('ticket'));
+        $ticket = Ticket::findOrFail($id);;
+
+        if (!$ticket) {
+            return view('tickets.invalid');
+        }
+ // Récupérer la date du jour
+        $today = Carbon::today()->toDateString();
+
+        // Définir les jours de l'événement
+        $jour1 = "2025-09-15";
+        $jour2 = "2025-11-05";
+        $jour3 = "2025-11-06";
+
+        $colonne = null;
+
+        if ($today === $jour1) {
+            $colonne = "jour1";
+        } elseif ($today === $jour2) {
+            $colonne = "jour2";
+        } elseif ($today === $jour3) {
+            $colonne = "jour3";
+        } else {
+            return view('tickets.show', compact('ticket'));
+        }
+
+        // Marquer la présence si pas déjà fait
+        if (!$ticket->$colonne) {
+            $ticket->$colonne = true;
+            $ticket->save();
+        }
+
+        return view('tickets.show', compact('ticket'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -122,4 +160,47 @@ class TicketController extends Controller
         $this->ticketRepository->destroy($id);
         return redirect('ticket');
     }
+
+
+    public function marquerPresence($id)
+    {
+        $participant = Participant::findOrFail($id);
+
+        // Récupérer la date du jour
+        $today = Carbon::today()->toDateString();
+
+        // Définir les jours de l'événement
+        $jour1 = "2025-11-04";
+        $jour2 = "2025-11-05";
+        $jour3 = "2025-11-06";
+
+        $colonne = null;
+
+        if ($today === $jour1) {
+            $colonne = "jour1";
+        } elseif ($today === $jour2) {
+            $colonne = "jour2";
+        } elseif ($today === $jour3) {
+            $colonne = "jour3";
+        } else {
+            return response()->json([
+                "success" => false,
+                "message" => "⚠️ Aujourd'hui n'est pas un jour du forum."
+            ], 400);
+        }
+
+        // Marquer la présence si pas déjà fait
+        if (!$participant->$colonne) {
+            $participant->$colonne = true;
+            $participant->save();
+        }
+
+        return response()->json([
+            "success" => true,
+            "message" => "Présence enregistrée pour $colonne",
+            "participant" => $participant
+        ]);
+    }
 }
+
+

@@ -14,6 +14,8 @@ return [
     'date_place' => 'November 4-6, 2025 | Dakar, Senegal',
     'register' => 'Register',
     'see_program' => 'See Program',
+    'forum_theme' => 'From resilience to sovereignty: roles of cities, territories, and actors',
+
 
     // Countdown
     'countdown_title' => 'Countdown to the Event',

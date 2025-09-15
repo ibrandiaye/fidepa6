@@ -7,6 +7,8 @@ return [
     'menu_program' => 'Programme',
     'menu_register' => 'Inscription',
     'menu_contact' => 'Contact',
+    'forum_theme' => 'De la résilience à la souveraineté : rôles des villes, des territoires et des acteurs',
+
 
     // Hero
     'title' => 'FIDEPA 2025',

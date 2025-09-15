@@ -14,6 +14,8 @@ return [
     'date_place' => '4 a 6 de novembro de 2025 | Dakar, Senegal',
     'register' => 'Inscrever-se',
     'see_program' => 'Ver Programa',
+    'forum_theme' => 'Da resiliência à soberania: papéis das cidades, dos territórios e dos atores',
+
 
     // Countdown
     'countdown_title' => 'Contagem regressiva para o evento',
