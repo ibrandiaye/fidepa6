@@ -52,6 +52,7 @@ return [
     // Registration
     'register_title' => 'Registration',
     'register_text' => 'Join FIDEPA 2025 for free by registering now and receive your digital ticket with QR Code.',
+    'registration_success' => 'Thank you for your registration. Your accreditation has been sent to you by email.',
 
     // Contact
     'contact_title' => 'Contact',
@@ -61,13 +62,15 @@ return [
     //inscription
 
     'close'      => 'Close',
-    'lastname'   => 'Last name *',
-    'firstname'  => 'First name *',
-    'email'      => 'Email *',
-    'country'    => 'Country *',
+    'lastname'   => 'Last name ',
+    'firstname'  => 'First name ',
+    'email'      => 'Email ',
+    'country'    => 'Country ',
     'choose'     => '-- Select a country --',
     'phone'      => 'Phone *',
     'submit'     => 'Submit',
+    'structure' => 'Structure',
+
 
     'team'       => "Organizing team",
     'hello'      => "Dear Mr./Mrs. :name,",

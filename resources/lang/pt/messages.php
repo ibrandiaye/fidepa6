@@ -54,6 +54,8 @@ return [
     // Registration
     'register_title' => 'Inscrição',
     'register_text' => 'Participe gratuitamente do FIDEPA 2025 inscrevendo-se agora e receba seu bilhete digital com QR Code.',
+    'registration_success' => 'Obrigado pela sua inscrição. A sua acreditação foi enviada por e-mail.',
+
 
     // Contact
     'contact_title' => 'Contato',
@@ -63,13 +65,15 @@ return [
     //formualire
 
     'close'      => 'Fechar',
-    'lastname'   => 'Sobrenome *',
-    'firstname'  => 'Primeiro nome *',
-    'email'      => 'Email *',
-    'country'    => 'País *',
+    'lastname'   => 'Sobrenome ',
+    'firstname'  => 'Primeiro nome ',
+    'email'      => 'Email ',
+    'country'    => 'País ',
     'choose'     => '-- Escolha um país --',
     'phone'      => 'Telefone *',
     'submit'     => 'Validar',
+    'structure' => 'Estrutura',
+
 
     'team'       => "Equipe de organização",
     'hello'      => "Olá Senhor/Senhora :name,",

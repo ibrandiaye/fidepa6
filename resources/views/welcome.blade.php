@@ -327,6 +327,10 @@
   align-items: center;
   z-index: 2000;
 }
+  a:not(.no-style) {
+        /* Styles que vous voulez appliquer à tous les liens, sauf ceux avec la classe "no-style" */
+        text-decoration: none !important;
+    }
 
 
   </style>
@@ -336,7 +340,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
 		<a class="navbar-brand d-flex align-items-center" href="#">
-		  <img src="logo/fidepa.jpg" alt="Logo FIDEPA" height="50" class="me-2 rounded ">
+		  <img src="logo/fidepas.png" alt="Logo FIDEPA" height="50" class="me-2 rounded ">
 
 		</a>
 
@@ -355,7 +359,7 @@
       </div>
       <div class="dropdown">
       <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-        🌐 {{  session('locale')=="fr" ? "Français"  :  " " }}
+        🌐 {{  session('locale')=="fr" || session('locale')=='' ? "Français"  :  " " }}
         {{  session('locale')=="en" ? "English"  : "" }}
         {{  session('locale')=="pt" ?  "Português"  : ""}}
       </button>
@@ -460,35 +464,42 @@
     <div class="row">
       <!-- Thème 1 -->
       <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
-        <div class="theme-card" style="background-image: url('logo/ds.jpg');">
-          <div class="overlay-theme"></div>
-          <div class="theme-content">
-            <h4>{{ __('messages.theme1_title') }}</h4>
-            <p>{{ __('messages.theme1_text') }}</p>
-          </div>
-        </div>
+        <a href="{{  session('locale')=="fr" ||  session('locale')=="" ? config('app.url').'/doc/fr1.pdf'  :  config('app.url').'/doc/en1.pdf' }}" target="_blank">
+            <div class="theme-card" style="background-image: url('logo/ds.jpg'); text-decoration: none !important;">
+                <div class="overlay-theme"></div>
+                <div class="theme-content">
+                    <h4>{{ __('messages.theme1_title') }}</h4>
+                    <p  class="text-white" style="text-decoration: none !important;">{{ __('messages.theme1_text') }}</p>
+                </div>
+            </div>
+        </a>
       </div>
 
       <!-- Thème 2 -->
       <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-        <div class="theme-card" style="background-image: url('logo/se.png');">
-          <div class="overlay-theme"></div>
-          <div class="theme-content">
-            <h4>{{ __('messages.theme2_title') }}</h4>
-            <p>{{ __('messages.theme2_text') }}</p>
-          </div>
-        </div>
+        <a href="{{  session('locale')=="fr" ||  session('locale')==""  ? config('app.url').'/doc/fr2.pdf'  :  config('app.url').'/doc/en2.pdf' }}" target="_blank">
+
+            <div class="theme-card" style="background-image: url('logo/se.png');">
+            <div class="overlay-theme"></div>
+            <div class="theme-content">
+                <h4>{{ __('messages.theme2_title') }}</h4>
+                <p  class="text-white">{{ __('messages.theme2_text') }}</p>
+            </div>
+            </div>
+        </a>
       </div>
 
       <!-- Thème 3 -->
       <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
-        <div class="theme-card" style="background-image: url('logo/sn.png');">
-          <div class="overlay-theme"></div>
-          <div class="theme-content">
-            <h4>{{ __('messages.theme3_title') }}</h4>
-            <p>{{ __('messages.theme3_text') }}</p>
-          </div>
-        </div>
+        <a href="{{  session('locale')=="fr" ||  session('locale')==""  ? config('app.url').'/doc/fr3.pdf'  :  config('app.url').'/doc/en3.pdf' }}" target="_blank">
+            <div class="theme-card" style="background-image: url('logo/sn.png');">
+                <div class="overlay-theme"></div>
+                <div class="theme-content">
+                    <h4>{{ __('messages.theme3_title') }}</h4>
+                    <p class="text-white">{{ __('messages.theme3_text') }}</p>
+                </div>
+            </div>
+        </a>
       </div>
     </div>
   </div>
@@ -710,6 +721,10 @@
             <label for="email">{{ __('messages.email') }}</label>
             <input type="email" class="form-control" id="email" name="email" required>
           </div>
+          <div class="form-group">
+            <label for="email">{{ __('messages.structure') }}</label>
+            <input type="text" class="form-control" id="organisation" name="organisation" >
+          </div>
 
           <!-- Liste des pays avec indicatifs -->
           <div class="form-group">
@@ -801,8 +816,10 @@
   </footer>
 
   <!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="{{ asset('assets/js/notify.js') }}"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
 
@@ -837,7 +854,7 @@
     setInterval(countdown, 1000);
   </script>
   <!-- jQuery + script -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script>
 $(function () {
   $("#registerForm").on("submit", function (e) {
@@ -866,12 +883,15 @@ $(function () {
       method: "POST",
       data: $("#registerForm").serialize(),
       success: function (response) {
-        alert("Inscription réussie !");
+        //alert("Inscription réussie !");
+        let message = "{{ __('messages.registration_success') }}";
+        $.notify(message, "success");
         $("#registerModal").modal("hide");
         $("#registerForm")[0].reset();
       },
       error: function (xhr) {
-        alert("Erreur lors de l'inscription.");
+        $.notify("Erreur lors de l'inscription.", "error");
+       // alert("Erreur lors de l'inscription.");
       },
        complete: function () {
         // Cacher loader

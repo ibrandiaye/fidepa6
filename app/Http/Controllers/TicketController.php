@@ -9,6 +9,7 @@ use App\Repositories\TicketRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Mail;
+use Intervention\Image\Facades\Image;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class TicketController extends Controller
@@ -60,6 +61,7 @@ class TicketController extends Controller
             'tel' => 'required|string',
         ]);
 
+        $logo = null;
         $code = strtoupper(uniqid("FDP"));
         $qrPath = 'qrcodes/'.$code.'.svg';
         $request->request->add(['qr_path' => $qrPath,'code_unique' => $code]);
@@ -74,7 +76,11 @@ class TicketController extends Controller
         // Envoi du mail avec PDF en pièce jointe
        // $qrcode = QrCode::size(300)->generate(config('app.url').'/'.$ticket->id);
         $qrcode = base64_encode(QrCode::format('svg')->size(300)->generate(config("app.url")."/ticket"."/".$ticket->id));
-        Mail::to($ticket['email'])->send(new ParticipantRegistered($ticket, "FIDEPA 6",$qrcode));
+        // $logo = base64_encode(file_get_contents(config("app.url").'/logo/fidepas.png'));
+         //$img = Image::make(file_get_contents(config("app.url").'/logo/fidepas.png'));
+         // $logo = (string) $img->encode('data-url');
+       // dd(file_get_contents(config("app.url").'/logo/fidepas.png'));
+        Mail::to($ticket['email'])->send(new ParticipantRegistered($ticket, "FIDEPA 6",$qrcode, $logo));
        // return redirect('ticket');
        return response()->json(['success' => true, 'message' => 'Inscription réussie !']);
 

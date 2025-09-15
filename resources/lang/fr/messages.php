@@ -60,13 +60,15 @@ return [
 
     //inscription
      'close'      => 'Fermer',
-    'lastname'   => 'Nom *',
-    'firstname'  => 'Prénom *',
-    'email'      => 'Email *',
-    'country'    => 'Pays *',
+    'lastname'   => 'Nom ',
+    'firstname'  => 'Prénom ',
+    'email'      => 'Email ',
+    'country'    => 'Pays ',
     'choose'     => '-- Choisir un pays --',
     'phone'      => 'Téléphone *',
     'submit'     => 'Valider',
+    'structure' => 'Structure',
+
 
 
     'team'       => "L’équipe d’organisation",
@@ -74,5 +76,8 @@ return [
     'thanks'     => "Merci de votre inscription à <strong>:event</strong>.",
     'attachment' => "Vous trouverez en pièce jointe votre accréditation (à imprimer).",
     'regards'    => "Cordialement,<br>L’équipe d’organisation",
+
+    'registration_success' => 'Nous vous remercions pour votre inscription. Votre accréditation vous a été transmise par email.',
+
 
 ];

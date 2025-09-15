@@ -18,10 +18,19 @@
 </head>
 <body>
     <div class="badge">
+
+         <div class="qrcode">
+          <img src="{{ public_path('logo/fidepas.png') }}" width="200" alt="QR Code">
+
+
+        </div>
         <h1>{{ $eventTitle }}</h1>
         <h2>{{ $participant['prenom'] }} {{ $participant['nom'] }}</h2>
-        <p>{{ __('messages.phone') }} : {{ $participant['tel'] }}</p>
-        <p>{{ __('messages.email') }} : {{ $participant['email'] }}</p>
+       {{--  <p>{{ __('messages.phone') }} : {{ $participant['tel'] }}</p>
+        <p>{{ __('messages.email') }} : {{ $participant['email'] }}</p> --}}
+         <p>{{ __('messages.structure') }} : {{ $participant['organisation'] }}</p>
+         <p>{{ __('messages.country') }} : {{ $participant['pays'] }}</p>
+
         <div class="qrcode">
           <img src="data:image/png;base64, {!! $qrcode !!}" width="200" alt="QR Code">
 

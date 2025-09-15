@@ -15,12 +15,14 @@ class ParticipantRegistered extends Mailable
     public $participant;
     public $eventTitle;
     public $qrcode;
+    public  $logo;
 
-    public function __construct($participant, $eventTitle,$qrcode)
+    public function __construct($participant, $eventTitle,$qrcode, $logo)
     {
         $this->participant = $participant;
         $this->eventTitle = $eventTitle;
         $this->qrcode = $qrcode;
+        $this->logo = $logo;
     }
 
     public function build()
@@ -29,7 +31,8 @@ class ParticipantRegistered extends Mailable
         $pdf = Pdf::loadView('pdf.badge', [
             'participant' => $this->participant,
             'eventTitle' => $this->eventTitle,
-            'qrcode' => $this->qrcode
+            'qrcode' => $this->qrcode,
+            'logo' => $this->logo
         ]);
 
         return $this->subject('Confirmation d\'inscription - '.$this->eventTitle)
