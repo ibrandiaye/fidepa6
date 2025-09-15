@@ -377,6 +377,71 @@
   background: rgba(0,0,0,0.6);
   transform: scale(1.05);
 }
+/* Sponsors & Partenaires */
+.sponsor-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border-radius: 12px;
+  padding: 22px;
+  text-align: center;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.sponsor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+}
+.sponsor-card.featured {
+  background: linear-gradient(135deg, rgba(0,86,179,0.18), rgba(255,140,0,0.12));
+  border: 1px solid rgba(255,215,0,0.18);
+  transform: scale(1.02);
+}
+.sponsor-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0056b3, #ff8c00);
+  color: #fff;
+  font-weight:700;
+  font-size:13px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+.sponsor-card h4 {
+  margin-bottom: 12px;
+  color: #ffd700;
+  font-weight:800;
+}
+.sponsor-features {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 18px;
+  color: #f3f4f6;
+  text-align: left;
+}
+.sponsor-features li {
+  margin-bottom: 8px;
+}
+.sponsor-cta {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#0056b3,#ff8c00);
+  color: #fff;
+  font-weight:700;
+  text-decoration:none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.sponsor-cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Responsive spacing */
+@media (max-width: 767px) {
+  .sponsor-features { font-size: 14px; }
+  .sponsor-card { padding: 18px; }
+}
+
 
 
   </style>
@@ -775,6 +840,55 @@
             </div>
         </div>
         </div>
+        <!-- Packs Sponsors & Partenaires -->
+        <h3 class="text-white mb-4 text-center">Packs Sponsors & Partenaires</h3>
+        <div class="row mb-4">
+        <!-- Sponsor Ivoire -->
+        <div class="col-md-4 mb-3" data-aos="fade-right" data-aos-delay="100">
+            <div class="sponsor-card">
+            <div class="sponsor-badge">Sponsor Ivoire</div>
+            <h4 class="mt-3">3 000 000 FCFA</h4>
+            <ul class="sponsor-features">
+                <li>Logo sur site web & e-catalogue</li>
+                <li>2 passes Forum + 1 invitation Gala</li>
+                <li>Mention dans capsule groupée</li>
+                <li>Visibilité ciblée (projection salle)</li>
+            </ul>
+            <a class="btn sponsor-cta" href="mailto:secretariat@oidp-afrique.org?subject=Demande%20Sponsor%20Ivoire%20FIDEPA06">Devenir sponsor</a>
+            </div>
+        </div>
+
+        <!-- Sponsor Gold -->
+        <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="sponsor-card featured">
+            <div class="sponsor-badge">Sponsor Gold</div>
+            <h4 class="mt-3">6 000 000 FCFA</h4>
+            <ul class="sponsor-features">
+                <li>Logo sur tous supports majeurs + page dédiée</li>
+                <li>4 passes Forum + 2 invitations Gala + 1 badge VIP</li>
+                <li>Capsule individuelle, relais réseaux</li>
+                <li>Possibilité de prise de parole / projection vidéo</li>
+            </ul>
+            <a class="btn sponsor-cta" href="mailto:secretariat@oidp-afrique.org?subject=Demande%20Sponsor%20Gold%20FIDEPA06">Devenir sponsor</a>
+            </div>
+        </div>
+
+        <!-- Partenaire Diamond -->
+        <div class="col-md-4 mb-3" data-aos="fade-left" data-aos-delay="300">
+            <div class="sponsor-card">
+            <div class="sponsor-badge">Partenaire Diamond</div>
+            <h4 class="mt-3">À partir de 10 000 000 FCFA</h4>
+            <ul class="sponsor-features">
+                <li>Co-branding complet (scène, badges, visuels)</li>
+                <li>6 passes Forum, 3 badges VIP, 3 invitations Gala</li>
+                <li>Discours + interview média exclusive</li>
+                <li>Page partenaire dédiée & visibilité continentale</li>
+            </ul>
+            <a class="btn sponsor-cta" href="mailto:secretariat@oidp-afrique.org?subject=Demande%20Partenaire%20Diamond%20FIDEPA06">Devenir partenaire</a>
+            </div>
+        </div>
+        </div>
+
     </div>
     </section>
 
