@@ -442,11 +442,11 @@
   .sponsor-card { padding: 18px; }
 }
 
-.infos-section {
+/*.infos-section {
   background: linear-gradient(rgba(0,86,179,0.9), rgba(255,140,0,0.9)),
               url('images/dakar-bg.jpg') center/cover fixed;
   color: white;
-}
+}*/
 
 .info-card {
   background: rgba(255,255,255,0.1);
