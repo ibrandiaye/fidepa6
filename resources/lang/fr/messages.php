@@ -140,6 +140,12 @@ return [
     'become_sponsor' => 'Devenir sponsor',
     'become_partner' => 'Devenir partenaire',
 
+    "contact"=> "Contact",
+    "bureau"=> "Bureau Président OIDP Afrique",
+    "secretariat"=> "Secrétariat Général",
+
+    "partners"=>"Nos Partenaires"
+
 
 
 

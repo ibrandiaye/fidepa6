@@ -142,5 +142,13 @@ return [
     'become_sponsor' => 'Tornar-se patrocinador',
     'become_partner' => 'Tornar-se parceiro',
 
+    "contact"=> "Contato",
+    "bureau"=> "Escritório do Presidente OIDP África",
+    "secretariat"=> "Secretariado Geral",
+
+    "partners"=>"Nossos Parceiros",
+
+
+
 
 ];

@@ -139,5 +139,11 @@ return [
     'become_sponsor' => 'Become a sponsor',
     'become_partner' => 'Become a partner',
 
+    "contact"=> "Contact",
+    "bureau"=> "OIDP Africa President Office",
+    "secretariat"=> "General Secretariat",
+
+    "partners"=>"Our Partners"
+
 
 ];

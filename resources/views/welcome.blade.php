@@ -442,6 +442,49 @@
   .sponsor-card { padding: 18px; }
 }
 
+.infos-section {
+  background: linear-gradient(rgba(0,86,179,0.9), rgba(255,140,0,0.9)),
+              url('images/dakar-bg.jpg') center/cover fixed;
+  color: white;
+}
+
+.info-card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.tour-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: transform .3s ease;
+}
+.tour-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.tour-card:hover img {
+  transform: scale(1.1);
+}
+.tour-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.tour-info h5 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
 
 
   </style>
@@ -466,6 +509,9 @@
           <li class="nav-item"><a class="nav-link" href="#programme">{{ __('messages.menu_program') }}</a></li>
           <li class="nav-item"><a class="nav-link" href="#inscription">{{ __('messages.menu_register') }}</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">{{ __('messages.menu_contact') }}</a></li>
+
+           <li class="nav-item"><a class="nav-link" href="#expo">{{ __('messages.expo_title') }}</a></li>
+          <li class="nav-item"><a class="nav-link" href="#infos">{{ __('infos.title') }}</a></li>
         </ul>
       </div>
       <div class="dropdown">
@@ -941,17 +987,21 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-5">
-    <div class="container" data-aos="fade-left">
-      <h2 class="section-title gradient-text">Contact</h2>
-      <h5 class="text-center">Bureau Président OIDP Afrique : president@oidp-afrique.org <br>   Secrétariat Général : secretariat@oidp-afrique.org / khadim@oidp-afrique.org</h5>
-    </div>
-  </section>
+<section id="contact" class="py-5">
+  <div class="container" data-aos="fade-left">
+    <h2 class="section-title gradient-text">{{ __('Contact') }}</h2>
+    <h5 class="text-center">
+      {{ __('Bureau Président OIDP Afrique') }} : president@oidp-afrique.org <br>
+      {{ __('Secrétariat Général') }} : secretariat@oidp-afrique.org / khadim@oidp-afrique.org
+    </h5>
+  </div>
+</section>
+
 
   <!-- Partenaires -->
 	<section id="partenaires" class="py-5 bg-light">
 	  <div class="container" data-aos="fade-up">
-		<h2 class="section-title gradient-text">Nos Partenaires</h2>
+		<h2 class="section-title gradient-text">{{ __('partners') }}</h2>
 		<div class="row justify-content-center align-items-center g-4">
 		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="100">
 			<img src="logo/ua.png" alt="Partenaire 1" class="partner-logo">
@@ -968,6 +1018,97 @@
 		</div>
 	  </div>
 	</section>
+
+    <!-- Infos Utiles -->
+<section id="infos" class="py-5 infos-section">
+  <div class="container" data-aos="fade-up">
+    <h2 class="section-title text-white">{{ __('infos.title') }}</h2>
+
+    <!-- Météo -->
+    <div class="row mb-5">
+      <div class="col-md-12" data-aos="fade-right">
+        <div class="info-card">
+          <h4>{{ __('infos.weather.title') }}</h4>
+          <p>{{ __('infos.weather.intro') }}</p>
+          <ul>
+            <li>{{ __('infos.weather.temp') }}</li>
+            <li>{{ __('infos.weather.climate') }}</li>
+            <li>{{ __('infos.weather.advice_day') }}</li>
+            <li>{{ __('infos.weather.advice_night') }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tourisme -->
+    <h3 class="text-white mb-4 text-center">{{ __('infos.tourism.title') }}</h3>
+    <div class="row g-4">
+
+      <!-- Monument -->
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="tour-card">
+          <img src="logo/dakar.jpg" alt="Monument de la Renaissance Africaine">
+          <div class="tour-info">
+            <h5>{{ __('infos.tourism.monument') }}</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gorée -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="tour-card">
+          <img src="logo/gore.png" alt="Île de Gorée">
+          <div class="tour-info">
+            <h5>{{ __('infos.tourism.goree') }}</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Musée -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="tour-card">
+          <img src="logo/musee.avif" alt="Musée des civilisations noires">
+          <div class="tour-info">
+            <h5>{{ __('infos.tourism.museum') }}</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Corniche -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="tour-card">
+          <img src="logo/corniche.jpg" alt="Corniche Ouest">
+          <div class="tour-info">
+            <h5>{{ __('infos.tourism.corniche') }}</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Madeleine -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+        <div class="tour-card">
+          <img src="logo/madelaine.jpg" alt="Îles de la Madeleine">
+          <div class="tour-info">
+            <h5>{{ __('infos.tourism.madelaine') }}</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lac Rose -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="500">
+        <div class="tour-card">
+          <img src="logo/lacrose.jpg" alt="Lac Rose">
+          <div class="tour-info">
+            <h5>{{ __('infos.tourism.lacrose') }}</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
 
 <!-- Modal -->
