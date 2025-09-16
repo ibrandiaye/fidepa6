@@ -577,18 +577,18 @@
         <div class="countdown-box"><div class="countdown-number gradient-text" id="seconds">00</div><div class="gradient-text">{{ __('messages.seconds') }}</div></div>
       </div>
           <div class="row justify-content-center align-items-center g-4">
-		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="100">
-			<img src="logo/mct.png" alt="Partenaire 1" class="partner-logo">
-		  </div>
-		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="200">
-			<img src="logo/oidp.png" alt="Partenaire 2" class="partner-logo">
-		  </div>
-		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="300">
-			<img src="logo/ael.png" alt="Partenaire 3" class="partner-logo">
-		  </div>
-		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="400">
-			<img src="logo/enda.png" alt="Partenaire 4" class="partner-logo">
-		  </div>
+                <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="logo/mct.png" alt="Partenaire 1" class="partner-logo">
+                </div>
+                <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="logo/oidp.png" alt="Partenaire 2" class="partner-logo">
+                </div>
+                <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="logo/ael.png" alt="Partenaire 3" class="partner-logo">
+                </div>
+                <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="logo/enda.png" alt="Partenaire 4" class="partner-logo">
+                </div>
 		</div>
     </div>
   </section>
@@ -1001,7 +1001,7 @@
   <!-- Partenaires -->
 	<section id="partenaires" class="py-5 bg-light">
 	  <div class="container" data-aos="fade-up">
-		<h2 class="section-title gradient-text">{{ __('partners') }}</h2>
+		<h2 class="section-title gradient-text">{{ __('messages.partners') }}</h2>
 		<div class="row justify-content-center align-items-center g-4">
 		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="100">
 			<img src="logo/ua.png" alt="Partenaire 1" class="partner-logo">
