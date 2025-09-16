@@ -79,5 +79,68 @@ return [
 
     'registration_success' => 'Nous vous remercions pour votre inscription. Votre accréditation vous a été transmise par email.',
 
+        'expo_title' => 'Territoire Expo 2025',
+    'expo_subtitle' => 'Salon d’exposition, de réseautage et de coopération des villes et territoires – Vitrine de solutions, du 4 au 6 novembre 2025, King Fahd Palace, Dakar.',
+
+    // Objectifs
+    'expo_goal1_title' => '🌍 Valoriser les pratiques locales',
+    'expo_goal1_text' => 'Projets, services publics, innovations citoyennes, produits locaux, partenariats…',
+
+    'expo_goal2_title' => '🤝 Offrir une vitrine dynamique',
+    'expo_goal2_text' => 'Villes, ministères, entreprises, start-up, OSC, universités, réseaux africains et internationaux.',
+
+    'expo_goal3_title' => '🔗 Créer des opportunités',
+    'expo_goal3_text' => 'Networking, coopération et dialogues stratégiques pour renforcer la souveraineté locale.',
+
+    // Packs
+    'expo_packs_title' => 'Packs Exposants',
+    'pack_ivoire' => 'Pack Ivoire',
+    'pack_gold' => 'Pack Gold',
+    'pack_diamond' => 'Pack Diamond',
+
+    'pack_ivoire_price' => '1 000 000 FCFA',
+    'pack_gold_price' => '1 500 000 FCFA',
+    'pack_diamond_price' => '2 000 000 FCFA',
+
+    'pack_ivoire_list' => ['Stand équipé 6 m²', 'Nom dans e-catalogue', '2 badges Expo'],
+    'pack_gold_list' => ['Stand 6 m² personnalisé', 'Logo sur site + projection', 'Pitch 5 min & 1 Gala'],
+    'pack_diamond_list' => ['Stand premium 9 m²', 'Logo sur tous supports', 'Pitch 8 min & Masterclass', '2 Gala + 3 badges'],
+
+        'sponsor_packs_title' => 'Packs Sponsors & Partenaires',
+
+    'sponsor_ivoire' => 'Sponsor Ivoire',
+    'sponsor_gold' => 'Sponsor Gold',
+    'partner_diamond' => 'Partenaire Diamond',
+
+    'sponsor_ivoire_price' => '3 000 000 FCFA',
+    'sponsor_gold_price' => '6 000 000 FCFA',
+    'partner_diamond_price' => 'À partir de 10 000 000 FCFA',
+
+    'sponsor_ivoire_list' => [
+        'Logo sur site web & e-catalogue',
+        '2 passes Forum + 1 invitation Gala',
+        'Mention dans capsule groupée',
+        'Visibilité ciblée (projection salle)'
+    ],
+
+    'sponsor_gold_list' => [
+        'Logo sur tous supports majeurs + page dédiée',
+        '4 passes Forum + 2 invitations Gala + 1 badge VIP',
+        'Capsule individuelle, relais réseaux',
+        'Possibilité de prise de parole / projection vidéo'
+    ],
+
+    'partner_diamond_list' => [
+        'Co-branding complet (scène, badges, visuels)',
+        '6 passes Forum, 3 badges VIP, 3 invitations Gala',
+        'Discours + interview média exclusive',
+        'Page partenaire dédiée & visibilité continentale'
+    ],
+
+    'become_sponsor' => 'Devenir sponsor',
+    'become_partner' => 'Devenir partenaire',
+
+
+
 
 ];

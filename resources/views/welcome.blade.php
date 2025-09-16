@@ -469,15 +469,15 @@
         </ul>
       </div>
       <div class="dropdown">
-      <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+      <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-white" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
         🌐 {{  session('locale')=="fr" || session('locale')=='' ? "Français"  :  " " }}
         {{  session('locale')=="en" ? "English"  : "" }}
         {{  session('locale')=="pt" ?  "Português"  : ""}}
       </button>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
-        <li><a class="dropdown-item" href="{{ url('lang/fr') }}">Français</a></li>
-        <li><a class="dropdown-item" href="{{ url('lang/en') }}">English</a></li>
-        <li><a class="dropdown-item" href="{{ url('lang/pt') }}">Português</a></li>
+        <li><a class="dropdown-item " href="{{ url('lang/fr') }}">Français</a></li>
+        <li><a class="dropdown-item " href="{{ url('lang/en') }}">English</a></li>
+        <li><a class="dropdown-item " href="{{ url('lang/pt') }}">Português</a></li>
       </ul>
     </div>
     </div>
@@ -512,7 +512,7 @@
         <h2 class="mb-3 gradient-text">{{ __('messages.subtitle') }}</h2>
         <h3 id="slogan" class="mb-4"></h3>
         <p class="lead mb-4">{{ __('messages.date_place') }}</p>
-        <button class="btn btn-gradient" data-bs-toggle="modal" data-bs-target="#registerModal">
+        <button class="btn btn-lg btn-gradient" data-bs-toggle="modal" data-bs-target="#registerModal">
             {{ __('messages.register') }}
         </button>
         <a href="#programme" class="btn btn-outline-light btn-lg">{{ __('messages.see_program') }}</a>
@@ -530,14 +530,42 @@
         <div class="countdown-box"><div class="countdown-number gradient-text" id="minutes">00</div><div class="gradient-text">{{ __('messages.minutes') }}</div></div>
         <div class="countdown-box"><div class="countdown-number gradient-text" id="seconds">00</div><div class="gradient-text">{{ __('messages.seconds') }}</div></div>
       </div>
+          <div class="row justify-content-center align-items-center g-4">
+		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="100">
+			<img src="logo/mct.png" alt="Partenaire 1" class="partner-logo">
+		  </div>
+		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="200">
+			<img src="logo/oidp.png" alt="Partenaire 2" class="partner-logo">
+		  </div>
+		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="300">
+			<img src="logo/ael.png" alt="Partenaire 3" class="partner-logo">
+		  </div>
+		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="400">
+			<img src="logo/enda.png" alt="Partenaire 4" class="partner-logo">
+		  </div>
+		</div>
     </div>
   </section>
 
  <!-- About -->
 <section id="about" class="py-5 about-section">
   <div class="container" data-aos="fade-right">
-      <h2 class="section-title gradient-text">{{ __('messages.about_title') }}</h2>
-      <p class="lead text-white">{!! __('messages.about_text') !!}</p>
+{{--     <div class="row justify-content-center align-items-center g-4">
+		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="100">
+			<img src="logo/mct.jpg" alt="Partenaire 1" class="partner-logo">
+		  </div>
+		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="200">
+			<img src="logo/oidp.jpg" alt="Partenaire 2" class="partner-logo">
+		  </div>
+		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="300">
+			<img src="logo/ael.jpg" alt="Partenaire 3" class="partner-logo">
+		  </div>
+		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="400">
+			<img src="logo/enda.jpg" alt="Partenaire 4" class="partner-logo">
+		  </div>
+		</div> --}}
+      <h2 class="section-title text-white">{{ __('messages.about_title') }}</h2>
+      <p class="lead text-white" >{!! __('messages.about_text') !!}</p>
     </div>
 </section>
 
@@ -768,10 +796,9 @@
         <!-- Territoire Expo -->
     <section id="expo" class="py-5 expo-section">
     <div class="container" data-aos="fade-up">
-        <h2 class="section-title text-white">Territoire Expo 2025</h2>
+        <h2 class="section-title text-white">{{ __('messages.expo_title') }}</h2>
         <p class="lead text-white text-center mb-5">
-        Salon d’exposition, de réseautage et de coopération des villes et territoires
-        – Vitrine de solutions, du 4 au 6 novembre 2025, King Fahd Palace, Dakar.
+        {{ __('messages.expo_subtitle') }}
         </p>
 
         <!-- Objectifs -->
@@ -779,114 +806,123 @@
         <div class="col-md-4" data-aos="zoom-in">
             <div class="card expo-card">
             <div class="card-body">
-                <h5>🌍 Valoriser les pratiques locales</h5>
-                <p>Projets, services publics, innovations citoyennes, produits locaux, partenariats…</p>
+                <h5>{{ __('messages.expo_goal1_title') }}</h5>
+                <p>{{ __('messages.expo_goal1_text') }}</p>
             </div>
             </div>
         </div>
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="card expo-card">
             <div class="card-body">
-                <h5>🤝 Offrir une vitrine dynamique</h5>
-                <p>Villes, ministères, entreprises, start-up, OSC, universités, réseaux africains et internationaux.</p>
+                <h5>{{ __('messages.expo_goal2_title') }}</h5>
+                <p>{{ __('messages.expo_goal2_text') }}</p>
             </div>
             </div>
         </div>
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
             <div class="card expo-card">
             <div class="card-body">
-                <h5>🔗 Créer des opportunités</h5>
-                <p>Networking, coopération et dialogues stratégiques pour renforcer la souveraineté locale.</p>
+                <h5>{{ __('messages.expo_goal3_title') }}</h5>
+                <p>{{ __('messages.expo_goal3_text') }}</p>
             </div>
             </div>
         </div>
         </div>
 
         <!-- Packs -->
-        <h3 class="text-white mb-4 text-center">Packs Exposants</h3>
+        <h3 class="text-white mb-4 text-center">{{ __('messages.expo_packs_title') }}</h3>
         <div class="row">
-        <div class="col-md-4" data-aos="fade-right">
-            <div class="pricing-card">
-            <h4>Pack Ivoire</h4>
-            <p class="price">1 000 000 FCFA</p>
-            <ul>
-                <li>Stand équipé 6 m²</li>
-                <li>Nom dans e-catalogue</li>
-                <li>2 badges Expo</li>
-            </ul>
+        <!-- Pack Ivoire -->
+            <div class="col-md-4" data-aos="fade-right">
+                <div class="pricing-card">
+                <h4>{{ __('messages.pack_ivoire') }}</h4>
+                <p class="price">{{ __('messages.pack_ivoire_price') }}</p>
+                <ul>
+                    @foreach(__('messages.pack_ivoire_list') as $item)
+                    <li>{{ $item }}</li>
+                    @endforeach
+                </ul>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up">
-            <div class="pricing-card featured">
-            <h4>Pack Gold</h4>
-            <p class="price">1 500 000 FCFA</p>
-            <ul>
-                <li>Stand 6 m² personnalisé</li>
-                <li>Logo sur site + projection</li>
-                <li>Pitch 5 min & 1 Gala</li>
-            </ul>
+
+            <!-- Pack Gold -->
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="pricing-card featured">
+                <h4>{{ __('messages.pack_gold') }}</h4>
+                <p class="price">{{ __('messages.pack_gold_price') }}</p>
+                <ul>
+                    @foreach(__('messages.pack_gold_list') as $item)
+                    <li>{{ $item }}</li>
+                    @endforeach
+                </ul>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-left">
-            <div class="pricing-card">
-            <h4>Pack Diamond</h4>
-            <p class="price">2 000 000 FCFA</p>
-            <ul>
-                <li>Stand premium 9 m²</li>
-                <li>Logo sur tous supports</li>
-                <li>Pitch 8 min & Masterclass</li>
-                <li>2 Gala + 3 badges</li>
-            </ul>
+
+            <!-- Pack Diamond -->
+            <div class="col-md-4" data-aos="fade-left">
+                <div class="pricing-card">
+                <h4>{{ __('messages.pack_diamond') }}</h4>
+                <p class="price">{{ __('messages.pack_diamond_price') }}</p>
+                <ul>
+                    @foreach(__('messages.pack_diamond_list') as $item)
+                    <li>{{ $item }}</li>
+                    @endforeach
+                </ul>
+                </div>
             </div>
-        </div>
-        </div>
-        <!-- Packs Sponsors & Partenaires -->
-        <h3 class="text-white mb-4 text-center">Packs Sponsors & Partenaires</h3>
+            </div>
+            <!-- Packs Sponsors & Partenaires -->
+        <h3 class="text-white mb-4 text-center">{{ __('messages.sponsor_packs_title') }}</h3>
         <div class="row mb-4">
+
         <!-- Sponsor Ivoire -->
         <div class="col-md-4 mb-3" data-aos="fade-right" data-aos-delay="100">
             <div class="sponsor-card">
-            <div class="sponsor-badge">Sponsor Ivoire</div>
-            <h4 class="mt-3">3 000 000 FCFA</h4>
+            <div class="sponsor-badge">{{ __('messages.sponsor_ivoire') }}</div>
+            <h4 class="mt-3">{{ __('messages.sponsor_ivoire_price') }}</h4>
             <ul class="sponsor-features">
-                <li>Logo sur site web & e-catalogue</li>
-                <li>2 passes Forum + 1 invitation Gala</li>
-                <li>Mention dans capsule groupée</li>
-                <li>Visibilité ciblée (projection salle)</li>
+                @foreach(__('messages.sponsor_ivoire_list') as $item)
+              <li>{{ $item }}</li>
+            @endforeach
             </ul>
-            <a class="btn sponsor-cta" href="mailto:secretariat@oidp-afrique.org?subject=Demande%20Sponsor%20Ivoire%20FIDEPA06">Devenir sponsor</a>
+            <a class="btn sponsor-cta" href="mailto:secretariat@oidp-afrique.org?subject=Demande%20Sponsor%20Ivoire%20FIDEPA06">
+                {{ __('messages.become_sponsor') }}
+            </a>
             </div>
         </div>
 
         <!-- Sponsor Gold -->
         <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-delay="200">
             <div class="sponsor-card featured">
-            <div class="sponsor-badge">Sponsor Gold</div>
-            <h4 class="mt-3">6 000 000 FCFA</h4>
+            <div class="sponsor-badge">{{ __('messages.sponsor_gold') }}</div>
+            <h4 class="mt-3">{{ __('messages.sponsor_gold_price') }}</h4>
             <ul class="sponsor-features">
-                <li>Logo sur tous supports majeurs + page dédiée</li>
-                <li>4 passes Forum + 2 invitations Gala + 1 badge VIP</li>
-                <li>Capsule individuelle, relais réseaux</li>
-                <li>Possibilité de prise de parole / projection vidéo</li>
+                @foreach(__('messages.sponsor_gold_list') as $item)
+                <li>{{ $item }}</li>
+            @endforeach
             </ul>
-            <a class="btn sponsor-cta" href="mailto:secretariat@oidp-afrique.org?subject=Demande%20Sponsor%20Gold%20FIDEPA06">Devenir sponsor</a>
+            <a class="btn sponsor-cta" href="mailto:secretariat@oidp-afrique.org?subject=Demande%20Sponsor%20Gold%20FIDEPA06">
+                {{ __('messages.become_sponsor') }}
+            </a>
             </div>
         </div>
 
         <!-- Partenaire Diamond -->
         <div class="col-md-4 mb-3" data-aos="fade-left" data-aos-delay="300">
             <div class="sponsor-card">
-            <div class="sponsor-badge">Partenaire Diamond</div>
-            <h4 class="mt-3">À partir de 10 000 000 FCFA</h4>
+            <div class="sponsor-badge">{{ __('messages.partner_diamond') }}</div>
+            <h4 class="mt-3">{{ __('messages.partner_diamond_price') }}</h4>
             <ul class="sponsor-features">
-                <li>Co-branding complet (scène, badges, visuels)</li>
-                <li>6 passes Forum, 3 badges VIP, 3 invitations Gala</li>
-                <li>Discours + interview média exclusive</li>
-                <li>Page partenaire dédiée & visibilité continentale</li>
+               @foreach(__('messages.partner_diamond_list') as $item)
+              <li>{{ $item }}</li>
+            @endforeach
             </ul>
-            <a class="btn sponsor-cta" href="mailto:secretariat@oidp-afrique.org?subject=Demande%20Partenaire%20Diamond%20FIDEPA06">Devenir partenaire</a>
+            <a class="btn sponsor-cta" href="mailto:secretariat@oidp-afrique.org?subject=Demande%20Partenaire%20Diamond%20FIDEPA06">
+                {{ __('messages.become_partner') }}
+            </a>
             </div>
         </div>
+
         </div>
 
     </div>
@@ -907,7 +943,7 @@
   <!-- Contact -->
   <section id="contact" class="py-5">
     <div class="container" data-aos="fade-left">
-      <h2 class="section-title">Contact</h2>
+      <h2 class="section-title gradient-text">Contact</h2>
       <h5 class="text-center">Bureau Président OIDP Afrique : president@oidp-afrique.org <br>   Secrétariat Général : secretariat@oidp-afrique.org / khadim@oidp-afrique.org</h5>
     </div>
   </section>
@@ -915,20 +951,20 @@
   <!-- Partenaires -->
 	<section id="partenaires" class="py-5 bg-light">
 	  <div class="container" data-aos="fade-up">
-		<h2 class="section-title">Nos Partenaires</h2>
+		<h2 class="section-title gradient-text">Nos Partenaires</h2>
 		<div class="row justify-content-center align-items-center g-4">
 		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="100">
-			<img src="logo/mct.png" alt="Partenaire 1" class="partner-logo">
+			<img src="logo/ua.png" alt="Partenaire 1" class="partner-logo">
 		  </div>
 		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="200">
-			<img src="logo/oidp.png" alt="Partenaire 2" class="partner-logo">
+			<img src="logo/cglu.png" alt="Partenaire 2" class="partner-logo">
 		  </div>
-		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="300">
+		 {{--  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="300">
 			<img src="logo/ael.png" alt="Partenaire 3" class="partner-logo">
 		  </div>
 		  <div class="col-6 col-md-3 text-center" data-aos="zoom-in" data-aos-delay="400">
 			<img src="logo/enda.png" alt="Partenaire 4" class="partner-logo">
-		  </div>
+		  </div> --}}
 		</div>
 	  </div>
 	</section>

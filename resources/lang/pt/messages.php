@@ -80,4 +80,67 @@ return [
     'thanks'     => "Obrigado pela sua inscrição em <strong>:event</strong>.",
     'attachment' => "Em anexo encontra a sua acreditação (para imprimir).",
     'regards'    => "Atenciosamente,<br>Equipe de organização",
+
+        'expo_title' => 'Território Expo 2025',
+    'expo_subtitle' => 'Feira de exposição, networking e cooperação das cidades e territórios – Vitrine de soluções, de 4 a 6 de novembro de 2025, King Fahd Palace, Dakar.',
+
+    // Objetivos
+    'expo_goal1_title' => '🌍 Valorizar as práticas locais',
+    'expo_goal1_text' => 'Projetos, serviços públicos, inovações cidadãs, produtos locais, parcerias…',
+
+    'expo_goal2_title' => '🤝 Oferecer uma vitrine dinâmica',
+    'expo_goal2_text' => 'Cidades, ministérios, empresas, start-ups, OSCs, universidades, redes africanas e internacionais.',
+
+    'expo_goal3_title' => '🔗 Criar oportunidades',
+    'expo_goal3_text' => 'Networking, cooperação e diálogos estratégicos para reforçar a soberania local.',
+
+    // Packs
+    'expo_packs_title' => 'Pacotes de Expositores',
+    'pack_ivoire' => 'Pacote Marfim',
+    'pack_gold' => 'Pacote Ouro',
+    'pack_diamond' => 'Pacote Diamante',
+
+    'pack_ivoire_price' => '1 000 000 FCFA',
+    'pack_gold_price' => '1 500 000 FCFA',
+    'pack_diamond_price' => '2 000 000 FCFA',
+
+    'pack_ivoire_list' => ['Stand equipado 6 m²', 'Nome no e-catálogo', '2 crachás Expo'],
+    'pack_gold_list' => ['Stand personalizado 6 m²', 'Logotipo no site + projeção', 'Pitch de 5 min & 1 Gala'],
+    'pack_diamond_list' => ['Stand premium 9 m²', 'Logotipo em todos os suportes', 'Pitch de 8 min & Masterclass', '2 Galas + 3 crachás'],
+
+        'sponsor_packs_title' => 'Pacotes de Patrocinadores & Parceiros',
+
+    'sponsor_ivoire' => 'Patrocinador Marfim',
+    'sponsor_gold' => 'Patrocinador Ouro',
+    'partner_diamond' => 'Parceiro Diamante',
+
+    'sponsor_ivoire_price' => '3 000 000 FCFA',
+    'sponsor_gold_price' => '6 000 000 FCFA',
+    'partner_diamond_price' => 'A partir de 10 000 000 FCFA',
+
+    'sponsor_ivoire_list' => [
+        'Logotipo no site web & e-catálogo',
+        '2 passes Fórum + 1 convite Gala',
+        'Menção em cápsula coletiva',
+        'Visibilidade direcionada (projeção na sala)'
+    ],
+
+    'sponsor_gold_list' => [
+        'Logotipo em todos os suportes principais + página dedicada',
+        '4 passes Fórum + 2 convites Gala + 1 crachá VIP',
+        'Cápsula individual, divulgação em redes sociais',
+        'Possibilidade de discurso / projeção de vídeo'
+    ],
+
+    'partner_diamond_list' => [
+        'Co-branding completo (palco, crachás, visuais)',
+        '6 passes Fórum, 3 crachás VIP, 3 convites Gala',
+        'Discurso + entrevista exclusiva para a mídia',
+        'Página dedicada do parceiro & visibilidade continental'
+    ],
+
+    'become_sponsor' => 'Tornar-se patrocinador',
+    'become_partner' => 'Tornar-se parceiro',
+
+
 ];

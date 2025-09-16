@@ -77,4 +77,67 @@ return [
     'thanks'     => "Thank you for registering for <strong>:event</strong>.",
     'attachment' => "You will find attached your accreditation (please print it).",
     'regards'    => "Best regards,<br>Organizing team",
+
+        'expo_title' => 'Territory Expo 2025',
+    'expo_subtitle' => 'Exhibition, networking and cooperation fair of cities and territories – Showcase of solutions, from November 4 to 6, 2025, King Fahd Palace, Dakar.',
+
+    // Goals
+    'expo_goal1_title' => '🌍 Showcase local practices',
+    'expo_goal1_text' => 'Projects, public services, citizen innovations, local products, partnerships…',
+
+    'expo_goal2_title' => '🤝 Provide a dynamic showcase',
+    'expo_goal2_text' => 'Cities, ministries, companies, start-ups, CSOs, universities, African and international networks.',
+
+    'expo_goal3_title' => '🔗 Create opportunities',
+    'expo_goal3_text' => 'Networking, cooperation and strategic dialogues to strengthen local sovereignty.',
+
+    // Packs
+    'expo_packs_title' => 'Exhibitor Packs',
+    'pack_ivoire' => 'Ivory Pack',
+    'pack_gold' => 'Gold Pack',
+    'pack_diamond' => 'Diamond Pack',
+
+    'pack_ivoire_price' => '1,000,000 FCFA',
+    'pack_gold_price' => '1,500,000 FCFA',
+    'pack_diamond_price' => '2,000,000 FCFA',
+
+    'pack_ivoire_list' => ['Equipped booth 6 m²', 'Name in e-catalogue', '2 Expo badges'],
+    'pack_gold_list' => ['Customized booth 6 m²', 'Logo on website + projection', '5 min pitch & 1 Gala'],
+    'pack_diamond_list' => ['Premium booth 9 m²', 'Logo on all media', '8 min pitch & Masterclass', '2 Galas + 3 badges'],
+
+        'sponsor_packs_title' => 'Sponsor & Partner Packages',
+
+    'sponsor_ivoire' => 'Ivory Sponsor',
+    'sponsor_gold' => 'Gold Sponsor',
+    'partner_diamond' => 'Diamond Partner',
+
+    'sponsor_ivoire_price' => '3,000,000 FCFA',
+    'sponsor_gold_price' => '6,000,000 FCFA',
+    'partner_diamond_price' => 'From 10,000,000 FCFA',
+
+    'sponsor_ivoire_list' => [
+        'Logo on website & e-catalogue',
+        '2 Forum passes + 1 Gala invitation',
+        'Mention in group capsule',
+        'Targeted visibility (room projection)'
+    ],
+
+    'sponsor_gold_list' => [
+        'Logo on all major media + dedicated page',
+        '4 Forum passes + 2 Gala invitations + 1 VIP badge',
+        'Individual capsule, social media relay',
+        'Possibility of speech / video projection'
+    ],
+
+    'partner_diamond_list' => [
+        'Full co-branding (stage, badges, visuals)',
+        '6 Forum passes, 3 VIP badges, 3 Gala invitations',
+        'Speech + exclusive media interview',
+        'Dedicated partner page & continental visibility'
+    ],
+
+    'become_sponsor' => 'Become a sponsor',
+    'become_partner' => 'Become a partner',
+
+
 ];
