@@ -267,7 +267,7 @@
 }
 #programme {
   background: linear-gradient(rgba(0,86,179,0.9), rgba(255,140,0,0.9)),
-              url('logo/dakar1.jpg') no-repeat center center/cover;
+              url('logo/fahd.jpg') no-repeat center center/cover;
   color: white;
 }
 

@@ -11,7 +11,7 @@ return [
     // Hero
     'title' => 'FIDEPA 2025',
     'subtitle' => '6th International Forum on Participatory Democracy in Africa',
-    'date_place' => 'November 4-6, 2025 | Dakar, Senegal',
+    'date_place' => 'November 4-6, 2025 | Dakar, Senegal  | King Fahd Palace',
     'register' => 'Register',
     'see_program' => 'See Program',
     'forum_theme' => 'From resilience to sovereignty: roles of cities, territories, and actors',

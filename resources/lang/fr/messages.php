@@ -13,7 +13,7 @@ return [
     // Hero
     'title' => 'FIDEPA 2025',
     'subtitle' => '6ème Forum International de la Démocratie Participative en Afrique',
-    'date_place' => '4-6 novembre 2025 | Dakar, Sénégal',
+    'date_place' => '4-6 novembre 2025 | Dakar, Sénégal | King Fahd Palace',
     'register' => 'S\'inscrire',
     'see_program' => 'Voir le programme',
 
