@@ -444,7 +444,7 @@
 
 .infos-section {
   background: linear-gradient(rgba(0,86,179,0.9), rgba(255,140,0,0.9)),
-              url('images/dakar.webp') center/cover fixed;
+              url('logo/dakar.webp') center/cover fixed;
   color: white;
 }
 
