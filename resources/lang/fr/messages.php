@@ -79,7 +79,7 @@ return [
 
     'registration_success' => 'Nous vous remercions pour votre inscription. Votre accréditation vous a été transmise par email.',
 
-        'expo_title' => 'Territoire Expo 2025',
+        'expo_title' => 'Salon d\'exposition',
     'expo_subtitle' => 'Salon d’exposition, de réseautage et de coopération des villes et territoires – Vitrine de solutions, du 4 au 6 novembre 2025, King Fahd Palace, Dakar.',
 
     // Objectifs
@@ -144,8 +144,10 @@ return [
     "bureau"=> "Bureau Président OIDP Afrique",
     "secretariat"=> "Secrétariat Général",
 
-    "partners"=>"Nos Partenaires"
+    "partners"=>"Nos Partenaires",
+    'exhibition' => "Salon d'exposition",
 
+    'function'=> "Fonction",
 
 
 

@@ -147,6 +147,9 @@ return [
     "secretariat"=> "Secretariado Geral",
 
     "partners"=>"Nossos Parceiros",
+    'exhibition' => 'Salão de Exposição',
+
+    'function'=> "Função",
 
 
 

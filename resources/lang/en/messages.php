@@ -143,7 +143,9 @@ return [
     "bureau"=> "OIDP Africa President Office",
     "secretariat"=> "General Secretariat",
 
-    "partners"=>"Our Partners"
+    "partners"=>"Our Partners",
+    'exhibition' => 'Exhibition Hall',
+     'function'=> "Function"
 
 
 ];

@@ -31,3 +31,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/by/jour/{jour}', [TicketController::class, 'getByJour'])->name('getByJour');
 
+
+Route::get('/test', function () {
+    return view('pdf.test');
+});

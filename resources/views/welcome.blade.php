@@ -195,8 +195,9 @@
   z-index: 1;
 }
 .partner-logo {
-  max-height: 100px;
-  max-width: 160px;
+  max-height: 70px;
+  max-width: 200px;
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .partner-logo:hover {
@@ -248,6 +249,13 @@
 /* bouton avec dégradé de fond */
 .btn-gradient {
   background: linear-gradient(to left, #FD8112, #0085CA) !important;
+  color: #fff !important; /* texte en blanc */
+  border: none;
+  padding: 12px 30px;
+  border-radius: 14px;
+}
+.btn-t{
+    background: red !important;
   color: #fff !important; /* texte en blanc */
   border: none;
   padding: 12px 30px;
@@ -842,7 +850,7 @@
         <!-- Territoire Expo -->
     <section id="expo" class="py-5 expo-section">
     <div class="container" data-aos="fade-up">
-        <h2 class="section-title text-white">{{ __('messages.expo_title') }}</h2>
+        <h2 class="section-title text-white">{{ __('messages.exhibition') }}</h2>
         <p class="lead text-white text-center mb-5">
         {{ __('messages.expo_subtitle') }}
         </p>
@@ -1115,12 +1123,11 @@
 <div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content p-3">
-      <div class="modal-header">
-        <h5 class="modal-title">{{ __('messages.register') }}</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="{{ __('messages.close') }}">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+     {{--  <div class="modal-header">
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      </div> --}}
       <form id="registerForm">
         @csrf
         <div class="modal-body">
@@ -1137,9 +1144,14 @@
             <label for="email">{{ __('messages.email') }}</label>
             <input type="email" class="form-control" id="email" name="email" required>
           </div>
+
           <div class="form-group">
             <label for="email">{{ __('messages.structure') }}</label>
             <input type="text" class="form-control" id="organisation" name="organisation" >
+          </div>
+           <div class="form-group">
+            <label for="fonction">{{ __('messages.function') }}</label>
+            <input type="text" class="form-control" id="fonction" name="fonction" >
           </div>
 
           <!-- Liste des pays avec indicatifs -->
@@ -1147,60 +1159,9 @@
             <label for="pays">{{ __('messages.country') }}</label>
             <select class="form-control" id="pays" name="pays" required>
                 <option value="">{{ __('messages.choose') }}</option>
-                <option value="Afrique du Sud|+27">Afrique du Sud (+27)</option>
-                <option value="Algérie|+213">Algérie (+213)</option>
-                <option value="Angola|+244">Angola (+244)</option>
-                <option value="Bénin|+229">Bénin (+229)</option>
-                <option value="Botswana|+267">Botswana (+267)</option>
-                <option value="Burkina Faso|+226">Burkina Faso (+226)</option>
-                <option value="Burundi|+257">Burundi (+257)</option>
-                <option value="Cabo Verde|+238">Cabo Verde (+238)</option>
-                <option value="Cameroun|+237">Cameroun (+237)</option>
-                <option value="Centrafrique|+236">Centrafrique (+236)</option>
-                <option value="Comores|+269">Comores (+269)</option>
-                <option value="Congo (Brazzaville)|+242">Congo (Brazzaville) (+242)</option>
-                <option value="Congo (Kinshasa)|+243">Congo (Kinshasa) (+243)</option>
-                <option value="Côte d'Ivoire|+225">Côte d'Ivoire (+225)</option>
-                <option value="Djibouti|+253">Djibouti (+253)</option>
-                <option value="Égypte|+20">Égypte (+20)</option>
-                <option value="Érythrée|+291">Érythrée (+291)</option>
-                <option value="Eswatini|+268">Eswatini (+268)</option>
-                <option value="Éthiopie|+251">Éthiopie (+251)</option>
-                <option value="Gabon|+241">Gabon (+241)</option>
-                <option value="Gambie|+220">Gambie (+220)</option>
-                <option value="Ghana|+233">Ghana (+233)</option>
-                <option value="Guinée|+224">Guinée (+224)</option>
-                <option value="Guinée-Bissau|+245">Guinée-Bissau (+245)</option>
-                <option value="Guinée Équatoriale|+240">Guinée Équatoriale (+240)</option>
-                <option value="Kenya|+254">Kenya (+254)</option>
-                <option value="Lesotho|+266">Lesotho (+266)</option>
-                <option value="Libéria|+231">Libéria (+231)</option>
-                <option value="Libye|+218">Libye (+218)</option>
-                <option value="Madagascar|+261">Madagascar (+261)</option>
-                <option value="Malawi|+265">Malawi (+265)</option>
-                <option value="Mali|+223">Mali (+223)</option>
-                <option value="Maroc|+212">Maroc (+212)</option>
-                <option value="Maurice|+230">Maurice (+230)</option>
-                <option value="Mauritanie|+222">Mauritanie (+222)</option>
-                <option value="Mozambique|+258">Mozambique (+258)</option>
-                <option value="Namibie|+264">Namibie (+264)</option>
-                <option value="Niger|+227">Niger (+227)</option>
-                <option value="Nigeria|+234">Nigeria (+234)</option>
-                <option value="Ouganda|+256">Ouganda (+256)</option>
-                <option value="Rwanda|+250">Rwanda (+250)</option>
-                <option value="Sao Tomé-et-Principe|+239">Sao Tomé-et-Principe (+239)</option>
-                <option value="Sénégal|+221">Sénégal (+221)</option>
-                <option value="Seychelles|+248">Seychelles (+248)</option>
-                <option value="Sierra Leone|+232">Sierra Leone (+232)</option>
-                <option value="Somalie|+252">Somalie (+252)</option>
-                <option value="Soudan|+249">Soudan (+249)</option>
-                <option value="Soudan du Sud|+211">Soudan du Sud (+211)</option>
-                <option value="Tanzanie|+255">Tanzanie (+255)</option>
-                <option value="Tchad|+235">Tchad (+235)</option>
-                <option value="Togo|+228">Togo (+228)</option>
-                <option value="Tunisie|+216">Tunisie (+216)</option>
-                <option value="Zambie|+260">Zambie (+260)</option>
-                <option value="Zimbabwe|+263">Zimbabwe (+263)</option>
+                @foreach ( config('countries') as $country )
+                    <option value="{{ $country }}">{{ $country }}</option>
+                @endforeach
             </select>
           </div>
 
@@ -1210,6 +1171,8 @@
           </div>
         </div>
         <div class="modal-footer">
+        <button type="button" class="btn btn-t " data-bs-dismiss="modal">{{ __('messages.close') }}</button>
+
           <button type="submit" class="btn btn-gradient">{{ __('messages.submit') }}</button>
         </div>
       </form>

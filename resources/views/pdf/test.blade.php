@@ -22,7 +22,7 @@
     .partners {
       text-align: center;
       white-space: nowrap; /* force une ligne */
-        margin-top: 10px;
+      margin-top: 10px;
     }
     .partners .item {
       display: inline-block;
@@ -43,36 +43,35 @@
     <div class="badge">
 
          <div class="qrcode">
-          <img src="{{ public_path('logo/fidepas.png') }}" width="200" alt="QR Code">
+          <img src="{{ asset('logo/fidepas.png') }}" width="100" alt="QR Code">
 
 
         </div>
-        <h1>{{ $eventTitle }}</h1>
-        <h2>{{ $participant['prenom'] }} {{ $participant['nom'] }}</h2>
+        <h1>qsddddddd</h1>
+        <h2>wxdwdsdqsddsqdsqdd</h2>
        {{--  <p>{{ __('messages.phone') }} : {{ $participant['tel'] }}</p>
         <p>{{ __('messages.email') }} : {{ $participant['email'] }}</p> --}}
-         <p>{{ __('messages.structure') }} : {{ $participant['organisation'] }}</p>
-          <p>{{ __('messages.function') }} : {{ $participant['fonction'] }}</p>
-         <p>{{ __('messages.country') }} : {{ $participant['pays'] }}</p>
+         <p>{{ __('messages.structure') }} : wxwdds</p>
+         <p>{{ __('messages.country') }} QSqsqsss</p>
 
         <div class="qrcode">
-          <img src="data:image/png;base64, {!! $qrcode !!}" width="200" alt="QR Code">
+          <img src="{{ asset('qrcodes/FDP68C1B0BCC604B.svg') }}" width="150" alt="QR Code">
 
         </div>
 
        <div class="partners">
 
     <div class="item">
-        <img src="{{ public_path('logo/mct.png') }}" alt="Partenaire 1" class="partner-logo" style="height: 70px !important;">
+        <img src="{{ asset('logo/mct.png') }}" alt="Partenaire 1" class="partner-logo">
     </div >
     <div class="item">
-        <img src="{{ public_path('logo/oidp.png') }}" alt="Partenaire 2" class="partner-logo">
+        <img src="{{ asset('logo/oidp.png') }}" alt="Partenaire 2" class="partner-logo">
     </div>
     <div class="item">
-        <img src="{{ public_path('logo/ael.png') }}" alt="Partenaire 3" class="partner-logo">
+        <img src="{{ asset('logo/ael.png') }}" alt="Partenaire 3" class="partner-logo">
     </div>
     <div class="item">
-        <img src="{{ public_path('logo/enda.png') }}" alt="Partenaire 4" class="partner-logo" style="height: 70px !important;">
+        <img src="{{ asset('logo/enda.png') }}" alt="Partenaire 4" class="partner-logo">
     </div>
 </div>
 
