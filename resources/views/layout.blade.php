@@ -9,7 +9,7 @@
     <meta content="Coderthemes" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('logo/fav.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('logo/fidepa.ico') }}">
 
      <!-- Table datatable css -->
      <link href=" {{ asset('assets/libs/datatables/dataTables.bootstrap4.min.css') }} " rel="stylesheet" type="text/css" />
