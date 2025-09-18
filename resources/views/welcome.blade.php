@@ -905,6 +905,9 @@
                     <li>{{ $item }}</li>
                     @endforeach
                 </ul>
+                 <a class="btn sponsor-cta" href="https://forms.gle/XoWjAg271TskSn2S7" target="_blank">
+                {{ __('messages.become_sponsor') }}
+            </a>
                 </div>
             </div>
 
@@ -918,6 +921,9 @@
                     <li>{{ $item }}</li>
                     @endforeach
                 </ul>
+                <a class="btn sponsor-cta" href="https://forms.gle/wZc1QRikH4jQw4WF9" target="_blank">
+                    {{ __('messages.become_sponsor') }}
+                </a>
                 </div>
             </div>
 
@@ -931,6 +937,9 @@
                     <li>{{ $item }}</li>
                     @endforeach
                 </ul>
+                <a class="btn sponsor-cta" href="https://forms.gle/khpFehZhagoWYDkq6" target="_blank">
+                    {{ __('messages.become_sponsor') }}
+                </a>
                 </div>
             </div>
             </div>
@@ -948,7 +957,7 @@
               <li>{{ $item }}</li>
             @endforeach
             </ul>
-            <a class="btn sponsor-cta" href="mailto:secretariat@oidp-afrique.org?subject=Demande%20Sponsor%20Ivoire%20FIDEPA06">
+            <a class="btn sponsor-cta" href="https://forms.gle/K8B28MRAMMUs6UQR7" target="_blank">
                 {{ __('messages.become_sponsor') }}
             </a>
             </div>
@@ -964,7 +973,7 @@
                 <li>{{ $item }}</li>
             @endforeach
             </ul>
-            <a class="btn sponsor-cta" href="mailto:secretariat@oidp-afrique.org?subject=Demande%20Sponsor%20Gold%20FIDEPA06">
+            <a class="btn sponsor-cta" href="https://forms.gle/TWYLtdBhpSHY7uzE8" target="_blank">
                 {{ __('messages.become_sponsor') }}
             </a>
             </div>
@@ -980,7 +989,7 @@
               <li>{{ $item }}</li>
             @endforeach
             </ul>
-            <a class="btn sponsor-cta" href="mailto:secretariat@oidp-afrique.org?subject=Demande%20Partenaire%20Diamond%20FIDEPA06">
+            <a class="btn sponsor-cta" href="https://forms.gle/6vyeKvKji79d8VAS9" target="_blank">
                 {{ __('messages.become_partner') }}
             </a>
             </div>
