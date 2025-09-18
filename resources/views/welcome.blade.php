@@ -15,6 +15,7 @@
     <meta property="og:image" content="https://fidepa6.oidp-afrique.org/logo/fidepa.jpg">
     <meta property="og:url" content="https://fidepa6.oidp-afrique.org">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="google-site-verification" content="L1zY4q3VIma3hNLc6XGe7Sqweltytz3RyQlIW6khTIE" />
 
   <style >
     :root {
