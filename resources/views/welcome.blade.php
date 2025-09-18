@@ -4,11 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FIDEPA 2025 - Forum International de la Démocratie Participative en Afrique</title>
+  <meta name="description" content="Participez au FIDEPA 2025 à Dakar : 6ème Forum International de la Démocratie Participative en Afrique. Du 4 au 6 novembre 2025 au King Fahd Palace.">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-      <link rel="shortcut icon" href="{{ asset('logo/fidepa.ico') }}">
-
+    <link rel="shortcut icon" href="{{ asset('logo/fidepa.ico') }}">
+    <meta property="og:title" content="FIDEPA 2025 – Forum International de la Démocratie Participative en Afrique">
+    <meta property="og:description" content="Du 4 au 6 novembre 2025 à Dakar. Un rendez-vous unique pour les villes, territoires et acteurs citoyens.">
+    <meta property="og:image" content="https://fidepa6.oidp-afrique.org/logo/fidepa.jpg">
+    <meta property="og:url" content="https://fidepa6.oidp-afrique.org">
+    <meta name="twitter:card" content="summary_large_image">
+<meta name="google-site-verification" content="L1zY4q3VIma3hNLc6XGe7Sqweltytz3RyQlIW6khTIE" />
   <style >
     :root {
       --fidepa-blue: #0056b3;
