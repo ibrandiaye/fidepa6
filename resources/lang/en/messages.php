@@ -145,7 +145,8 @@ return [
 
     "partners"=>"Our Partners",
     'exhibition' => 'Exhibition Hall',
-     'function'=> "Function"
+     'function'=> "Function",
+    'subscribe' => 'Subscribe',
 
 
 ];

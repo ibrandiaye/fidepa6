@@ -906,7 +906,7 @@
                     @endforeach
                 </ul>
                  <a class="btn sponsor-cta" href="https://forms.gle/XoWjAg271TskSn2S7" target="_blank">
-                {{ __('messages.become_sponsor') }}
+                {{ __('messages.subscribe') }}
             </a>
                 </div>
             </div>
@@ -922,7 +922,7 @@
                     @endforeach
                 </ul>
                 <a class="btn sponsor-cta" href="https://forms.gle/wZc1QRikH4jQw4WF9" target="_blank">
-                    {{ __('messages.become_sponsor') }}
+                    {{ __('messages.subscribe') }}
                 </a>
                 </div>
             </div>
@@ -938,7 +938,7 @@
                     @endforeach
                 </ul>
                 <a class="btn sponsor-cta" href="https://forms.gle/khpFehZhagoWYDkq6" target="_blank">
-                    {{ __('messages.become_sponsor') }}
+                    {{ __('messages.subscribe') }}
                 </a>
                 </div>
             </div>

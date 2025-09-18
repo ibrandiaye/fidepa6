@@ -148,6 +148,7 @@ return [
     'exhibition' => "Salon d'exposition",
 
     'function'=> "Fonction",
+    'subscribe' => 'Souscrire',
 
 
 

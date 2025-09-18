@@ -150,6 +150,7 @@ return [
     'exhibition' => 'Salão de Exposição',
 
     'function'=> "Função",
+     'subscribe' => 'Subscrever',
 
 
 
